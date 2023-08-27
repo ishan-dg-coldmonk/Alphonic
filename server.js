@@ -7,6 +7,11 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import errorHandler from "./middlewares/errorMiddleware.js";
 import path from "path";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 //routes path
 import authRoutes from "./routes/authRoutes.js";
